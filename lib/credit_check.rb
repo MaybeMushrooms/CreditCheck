@@ -2,20 +2,14 @@
 #     numbers=[]
 
 class CreditCheck
-    def initialize
-    @convert_credit_card_number_to_array
-    @convert_credit_card_number_to_string
-    @even_index_numbers_doubled
-    @numbers_over_nine_handled
-    @validate_number
-    @valid_card_number
-end
 
-def valid_number?(credit_card_number)
-    mutated_number = convert_credit_card_number_to_array(credit_card_number)
+
+def valid_number?(credit_card_check)
+    mutated_number = convert_credit_card_number_to_array(credit_card_check)
     validated_doubled_numbs = convert_credit_card_number_to_string(mutated_number)
     numbers_over_nine_handled = even_index_numbers_doubled(validated_doubled_numbs)
-    final_check = validate_number(numbers_over_nine_handled)
+    validate_number(numbers_over_nine_handled)
+
 end
 
 def convert_credit_card_number_to_array(card_number)
@@ -23,7 +17,7 @@ def convert_credit_card_number_to_array(card_number)
 end
 
 def convert_credit_card_number_to_string(reversed_array)
-    convert = reversed_array.map do |number|
+    convert = reversed_array.map! do |number|
         number.to_i
     end
 end
@@ -63,3 +57,4 @@ end
     end
 end
  
+end
