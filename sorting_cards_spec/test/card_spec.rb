@@ -1,8 +1,5 @@
 require "./lib/card"
 
-# before :each do
-#   @card = Card.new("Ace", "Spades")
-# end
 describe Card do 
 
     before :each do
